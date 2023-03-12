@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import org.junit.Test
 
-import org.junit.Assert.*
+import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -10,8 +10,25 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+
+    fun main() {
+        var nombre: String
+        var apellidoPaterno: String
+        var apellidoMaterno: String
+        var scanner = Scanner(System.`in`)
+
+        // Pide al usuario que ingrese un texto y lee la línea de texto completa de la consola
+
+        while (scanner.hasNextLine()) {
+            println("Ingresa tu nombre:")
+            println("Ingresa tu apellido paterno:")
+            println("Ingresa tu apellido materno:")
+            nombre = scanner.nextLine()
+            apellidoPaterno = scanner.nextLine()
+            apellidoMaterno = scanner.nextLine()
+            println("$nombre $apellidoPaterno $apellidoMaterno")
+        }
+
+
     }
 }
